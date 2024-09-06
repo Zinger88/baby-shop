@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Prettier (check & fix)
+
+```bash
+#check
+npx prettier . --check
+# fix
+npx prettier . --write
+```
+
 
 ## Getting Started
 
