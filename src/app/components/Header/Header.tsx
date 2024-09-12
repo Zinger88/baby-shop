@@ -23,7 +23,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 
-
+import Image from 'next/image';
 import { LinkText } from './components/link-text/LinkText';
 import { ThemeSwitcher } from '../themeSwitcher/ThemeSwitcher';
 
@@ -63,7 +63,9 @@ export function Header() {
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img alt="" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" className="h-8 w-auto" />
+                        <Image width={50} height={50} alt="" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            unoptimized={true}
+                        />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -135,10 +137,10 @@ export function Header() {
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img
+                            <Image width={50} height={50}
                                 alt=""
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                className="h-8 w-auto"
+                                unoptimized={true}
                             />
                         </a>
                         <button
