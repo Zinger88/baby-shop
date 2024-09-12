@@ -1,5 +1,3 @@
-import { Currency } from "./components/Currency";
-
 const About = async () => {
     const data: Response  = await fetch('https://api.vercel.app/blog');
     const posts: Record<string, unknown>[] = await data.json();
@@ -12,7 +10,6 @@ const About = async () => {
                     <li key={post.id}>{post.title}</li>
                 ))}
             </ul>
-            <Currency />
         </div>
     );
 };
