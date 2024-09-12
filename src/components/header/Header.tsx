@@ -20,7 +20,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { OtherSections } from './components/other-sections/OtherSections';
 import { callsToAction, sections, SectionsEnum } from '@/constants';
 import { Logo } from '../logo/Logo';
-import { ThemeSwitcher } from '../../app/components/themeSwitcher/ThemeSwitcher';
+import { ThemeSwitcher } from '../themeSwitcher/ThemeSwitcher';
 
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
