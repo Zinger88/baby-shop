@@ -16,11 +16,44 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline';
+
+<<<<<<<< HEAD:src/components/header/Header.tsx
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { OtherSections } from './components/other-sections/OtherSections';
 import { callsToAction, sections, SectionsEnum } from '@/constants';
 import { Logo } from '../logo/Logo';
 import { ThemeSwitcher } from '../../app/components/themeSwitcher/ThemeSwitcher';
+========
+import Image from 'next/image';
+import { LinkText } from './components/link-text/LinkText';
+import { ThemeSwitcher } from '../themeSwitcher/ThemeSwitcher';
+
+type Product = {
+    name: string;
+    description: string;
+    href: string;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+type CallToAction = {
+    name: string;
+    href: string;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+};
+
+const products: Product[] = [
+    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+];
+
+const callsToAction: CallToAction[] = [
+    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+    { name: 'Contact sales', href: '#', icon: PhoneIcon },
+];
+>>>>>>>> 6b431d9 (fix header uppercawe path):src/app/components/header-main/Header.tsx
 
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
