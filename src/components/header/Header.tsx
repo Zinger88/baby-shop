@@ -20,13 +20,13 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { OtherSections } from './components/other-sections/OtherSections';
 import { callsToAction, sections, SectionsEnum } from '@/constants';
 import { Logo } from '../logo/Logo';
-
+import { ThemeSwitcher } from '../themeSwitcher/ThemeSwitcher';
 
 export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
     return (
-        <header className="bg-primary w-full">
+        <header className="bg-primary w-full dark:bg-black">
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Logo />
@@ -43,7 +43,7 @@ export function Header() {
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">
+                        <PopoverButton className="flex items-center gap-x-1 rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50 dark:text-white">
                             {SectionsEnum.LIBRARY}
                             <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
                         </PopoverButton>
@@ -92,9 +92,7 @@ export function Header() {
                     <OtherSections />
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">
-                        Log in <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    <ThemeSwitcher />
                 </div>
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -139,12 +137,7 @@ export function Header() {
                                 <OtherSections />
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="#"
-                                    className=" block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Log in
-                                </a>
+                                <ThemeSwitcher />
                             </div>
                         </div>
                     </div>
