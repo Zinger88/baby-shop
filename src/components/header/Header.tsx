@@ -121,7 +121,7 @@ export function Header() {
                             <div className="space-y-2 py-6">
                                 <Disclosure as="div">
                                     <DisclosureButton className="group flex items-center gap-x-1 rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-white hover:text-black w-full justify-between dark:text-white dark:hover:bg-white dark:hover:text-black">
-                                        Product
+                                        {SectionsEnum.LIBRARY}
                                         <ChevronDownIcon
                                             aria-hidden="true"
                                             className="h-5 w-5 flex-none text-gray-400 group-data-[open]:rotate-180"
