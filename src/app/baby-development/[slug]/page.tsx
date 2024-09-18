@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const url = process.env.NODE_ENV === 'production' ? '/db.json' : 'http://localhost:3000/db.json';
+    const url = process.env.NODE_ENV === 'production' ? 'https://baby-shop-devlop.vercel.app/db.json' : 'http://localhost:3000/db.json';
     const res = await fetch(url);
     const posts = await res.json();
     const post = posts.topics.find((post: any) => post.id === params.slug);
