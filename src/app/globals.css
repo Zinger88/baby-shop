@@ -24,6 +24,7 @@ body {
         text-wrap: balance;
     }
 }
+
 .baby-development {
     color: #282828;
     max-width: 64rem;
@@ -51,6 +52,7 @@ body {
             background-color: rgb(233, 244, 249);
             z-index: -1;
             box-shadow: 0 0 5px rgba(0,0,0,.1);
+            transition: .3s;
         }
         &::before {
             content: '';
@@ -63,6 +65,7 @@ body {
             background-color: rgb(220, 244, 255);
             z-index: -2;
             box-shadow: 0 0 5px rgba(0,0,0,.1);
+            transition: .3s;
         }
     }
 
@@ -71,7 +74,7 @@ body {
         font-size: 16px;
         word-wrap: normal;
         margin-bottom: 1em;
-        border: 3px solid rgb(249, 242, 233);;
+        border: 3px solid rgb(249, 242, 233);
         td {
             padding: 10px;
         }
@@ -113,6 +116,7 @@ body {
             background-color: rgb(249, 242, 233);
             z-index: -1;
             box-shadow: 0 0 5px rgba(0,0,0,.1);
+            transition: .3s;
         }
     }
 
@@ -143,6 +147,48 @@ body {
         background-color: #e9f4f9;
         li {
             margin-bottom: 0.5em;
+        }
+    }
+}
+
+.dark .baby-development {
+    color: white;
+    h1 {
+        z-index: 1;
+        &::after {
+            background-color: rgb(96 119 129);
+            transition: .3s;
+        }
+        &::before {
+            transition: .3s;
+            background-color: rgb(28 65 82);
+        }
+    }
+    h2 {
+        z-index: 1;
+        &::after {
+            background-color: rgb(96 119 129);
+            transition: .3s;
+        }
+    }
+
+    ul {
+        background: #282828;
+    }
+    table {
+        border: 3px solid rgb(249, 242, 233);
+        th {
+            text-align: left;
+            font-size: 14px;
+            background-color: rgb(16, 16, 16);
+        }
+        ul {
+            background: none;
+        }
+        tr {
+            &:nth-of-type(2n) {
+                background: #2a2a2a;
+            }
         }
     }
 }
