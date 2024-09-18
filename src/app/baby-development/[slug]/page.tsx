@@ -14,8 +14,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
     };
     //return <div className="topic p-3" dangerouslySetInnerHTML={{ __html: post }} />;
     return (
-        <div className="topic p-6">
-            <h1 style={{ fontSize: '35px' }}>{postTitle}</h1>
+        <div className="baby-development p-6">
+            <h1 className="text-3xl" style={{ fontSize: '35px' }}>{postTitle}</h1>
+            <br/>
             {parse(postContent, options)}
         </div>
     );

@@ -27,7 +27,7 @@ export function Header() {
 
     return (
         <header className="bg-primary w-full dark:bg-black">
-            <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+            <nav aria-label="Global" className="mx-auto flex max-w-5xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Logo />
                 </div>
