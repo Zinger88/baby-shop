@@ -1,4 +1,4 @@
-import { ArrowPathIcon, ChartPieIcon, CursorArrowRaysIcon, FingerPrintIcon, PhoneIcon, PlayCircleIcon, SquaresPlusIcon } from "@heroicons/react/16/solid";
+import { SparklesIcon, ArrowPathIcon, ChartPieIcon, FingerPrintIcon, PhoneIcon, PlayCircleIcon, SquaresPlusIcon } from "@heroicons/react/16/solid";
 import { CallToAction, Section } from "./types";
 
 export const sections: Section[] = [
@@ -8,7 +8,7 @@ export const sections: Section[] = [
         href: '#',
         icon: ChartPieIcon,
     },
-    { name: 'Развитие малыша', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+    { name: 'Развитие малыша', description: 'Развитие по месяцам', href: '/baby-development', icon: SparklesIcon },
     {
         name: 'Полезные советы',
         description: 'Your customers’ data will be safe and secure',
