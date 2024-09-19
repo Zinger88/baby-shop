@@ -10,6 +10,9 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        tablet: '768px',
+      },
       colors: {
         primary: '#f6f4ea',
         background: 'var(--background)',
