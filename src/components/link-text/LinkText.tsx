@@ -3,13 +3,14 @@ import Link from 'next/link';
 interface LinkTextProps {
     children: React.ReactNode;
     route: string;
+    extClassName?: string;
 }
 
-export const LinkText: React.FC<LinkTextProps> = ({ children, route = '#' }) => {
+export const LinkText: React.FC<LinkTextProps> = ({ children, route = '#', extClassName = '' }) => {
     return (
         <Link
             href={route}
-            className="block rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-white hover:text-black dark:text-white dark:hover:bg-white dark:hover:text-black"
+            className={`block text-base font-semibold leading-6 text-gray-900 hover:text-amber-500 dark:text-white dark:hover:bg-white dark:hover:text-black ${extClassName ? extClassName : ''}`}
         >
             {children}
         </Link>
