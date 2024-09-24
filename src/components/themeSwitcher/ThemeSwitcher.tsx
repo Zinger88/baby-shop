@@ -1,34 +1,23 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { SwitcherButton } from './switcherButton/SwitcherButton';
+import { useCommonStore } from '@/store/commonStore';
 
-type Theme = 'light' | 'dark';
 
 export const ThemeSwitcher: React.FC = () => {
-    const [theme, setTheme] = useState<Theme>('light');
-
-    const applyTheme = (theme: Theme): void => {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    };
-
-    const toggleTheme = (): void => {
-        const newTheme: Theme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        applyTheme(newTheme);
-    };
-
+    const toogleDarkMode = useCommonStore((state) => state.toogleDarkMode);
+    const isDarkMode = useCommonStore((state) => state.isDarkMode);
+    const setDarkModeFromLS = useCommonStore((state) => state.setDarkModeFromLS);
+    
     useEffect(() => {
-        applyTheme(theme);
-        setTheme(theme);
-    }, [theme]);
-
+        setDarkModeFromLS();
+    }, [setDarkModeFromLS]);
+    const handleClick = () => {
+        toogleDarkMode();
+    }
     return (
-        <SwitcherButton onClick={toggleTheme} isDark={theme === 'dark'} />
+        <SwitcherButton onClick={handleClick} isDark={isDarkMode} />
     );
 };
 
