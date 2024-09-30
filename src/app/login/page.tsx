@@ -1,6 +1,6 @@
 import { Authorization } from "@/components/authorization/Authorization";
 
-export const Login = () => {
+const Login = async () => {
     return (
         <Authorization />
     )
