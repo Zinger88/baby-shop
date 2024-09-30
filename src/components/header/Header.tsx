@@ -58,6 +58,6 @@ export function Header() {
                     Menu
                 </button>
             </div>
-        </header >
+        </header>
     );
 }
