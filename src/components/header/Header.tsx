@@ -40,10 +40,16 @@ export function Header() {
                     <LinkText extClassName='mr-3' route="/about">О нас</LinkText>
                     <LinkText extClassName='mr-3' route="/marketplace">Магазин</LinkText>
                     <LinkText extClassName='mr-3' route="/contacts">Контакты</LinkText>
+                    <LinkText extClassName='header-authorization_mob mr-4 mt-3 pt-3 border-t w-full' route="/login">Регистрация</LinkText>
+
                 </nav>
-                <div className={`theme-switcher ${mobileMenuOpen ? 'mobile-active' : ''}`}>
-                    <ThemeSwitcher />
+                <div className='flex items-center'>
+                    <LinkText extClassName='header-authorization mr-4' route="/login">Регистрация</LinkText>
+                    <div className={`theme-switcher ${mobileMenuOpen ? 'mobile-active' : ''}`}>
+                        <ThemeSwitcher />
+                    </div>
                 </div>
+
 
                 <button
                     className={`dark:text-white dark:after:bg-white dark:before:bg-white menu-btn ${mobileMenuOpen ? 'active' : ''}`}
@@ -52,6 +58,6 @@ export function Header() {
                     Menu
                 </button>
             </div>
-        </header>
+        </header >
     );
 }
