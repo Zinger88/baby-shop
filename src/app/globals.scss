@@ -243,6 +243,10 @@ body {
     }
 }
 
+.header-authorization_mob {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .header {
         nav {
@@ -315,6 +319,12 @@ body {
 
         .menu-btn {
             display: flex;
+        }
+        .header-authorization {
+            display: none;
+        }
+        .header-authorization_mob {
+            display: block;
         }
     }
 }
