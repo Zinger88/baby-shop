@@ -9,10 +9,10 @@ export const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <Logo />
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
+                        <li className='mr-3'>
                             <LinkText route="/about">{SectionsEnum.ABOUT}</LinkText>
                         </li>
-                        <li>
+                        <li className='mr-3'>
                             <LinkText route="/marketplace">{SectionsEnum.MARKETPLACE}</LinkText>
                         </li>
                         <li>
