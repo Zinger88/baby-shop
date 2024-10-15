@@ -70,7 +70,7 @@ export const Authorization: React.FC = () => {
                         </div>
                     </div>
                     <div className="mt-10">Нет аккаунта?
-                        <Link href="/"> Зарегистрироваться!</Link>
+                        <Link className="hover:text-amber-500" href="/signup"> Зарегистрироваться!</Link>
                     </div>
                 </div>
             </div>
